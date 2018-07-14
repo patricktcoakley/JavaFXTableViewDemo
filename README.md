@@ -2,9 +2,7 @@
 
 This example application connects to a sample database included with MySQL and produces a TableView using 
 a join operation on an actor's first name, last name, the films they starred in, and their release date. The
- example application was created to learn more about working with JavaFX and databases, and is not representative of
-  best practices. It was made within the constraints of the predefined database model and is simply meant to work as a 
-   basic working prototype. 
+ example application was created to learn more about working with databases in JavaFX prior to working on a bigger project.
    
 [Screenshot](screen.png)
    
