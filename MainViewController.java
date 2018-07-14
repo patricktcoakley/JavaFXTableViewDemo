@@ -48,31 +48,31 @@ public class MainViewController implements Initializable {
     }
 
     private class TableEntry {
-        private String firstName;
-        private String lastName;
-        private String title;
-        private String releaseYear;
+        private final String firstName;
+        private final String lastName;
+        private final String title;
+        private final String releaseYear;
 
-        public TableEntry(String firstName, String lastName, String title, String releaseYear) {
+        TableEntry(String firstName, String lastName, String title, String releaseYear) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.title = title;
             this.releaseYear = releaseYear;
         }
 
-        public String getFirstName() {
+        String getFirstName() {
             return firstName;
         }
 
-        public String getLastName() {
+        String getLastName() {
             return lastName;
         }
 
-        public String getTitle() {
+        String getTitle() {
             return title;
         }
 
-        public String getReleaseYear() {
+        String getReleaseYear() {
             return releaseYear;
         }
     }
@@ -164,7 +164,7 @@ public class MainViewController implements Initializable {
         TableEntry currentEntry = actorTableView.getSelectionModel().getSelectedItem();
         PreparedStatement statement;
         int actorId = -1;
-        ResultSet rs = null;
+        ResultSet rs;
         String query = "SELECT actor_id FROM sakila.actor WHERE first_name = ? AND last_name = ?";
         try {
             statement = connection.prepareStatement(query);
@@ -185,7 +185,7 @@ public class MainViewController implements Initializable {
         TableEntry currentEntry = actorTableView.getSelectionModel().getSelectedItem();
         PreparedStatement statement;
         int filmId = -1;
-        ResultSet rs = null;
+        ResultSet rs;
         String query = "SELECT film_id FROM sakila.film WHERE title = ?";
         try {
             statement = connection.prepareStatement(query);

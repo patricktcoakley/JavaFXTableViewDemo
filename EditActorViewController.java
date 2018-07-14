@@ -13,8 +13,6 @@ import java.util.ResourceBundle;
 public class EditActorViewController implements Initializable {
 
     @FXML
-    private Button saveButton;
-    @FXML
     private Button cancelButton;
     @FXML
     private TextField firstNameTextField;
@@ -62,7 +60,7 @@ public class EditActorViewController implements Initializable {
             statement.setString(2, lastNameTextField.getText());
             statement.setInt(3, actorId);
             return statement.executeUpdate() == 1;
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
@@ -76,10 +74,10 @@ public class EditActorViewController implements Initializable {
         try {
             statement = connection.prepareStatement(query);
             statement.setString(1, titleTextField.getText());
-            statement.setInt(2,  releaseYear);
+            statement.setInt(2, releaseYear);
             statement.setInt(3, filmId);
             return statement.executeUpdate() == 1;
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }

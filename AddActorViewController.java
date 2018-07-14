@@ -28,7 +28,7 @@ public class AddActorViewController implements Initializable {
         databaseConnection = new DatabaseConnection();
     }
 
-    public boolean saveActor(String firstName, String lastName, Connection connection) {
+    private boolean saveActor(String firstName, String lastName, Connection connection) {
         PreparedStatement statement;
         String query = "INSERT INTO sakila.actor(first_name, last_name, last_update)" +
                 "VALUES(?, ?, ?)";
@@ -46,7 +46,7 @@ public class AddActorViewController implements Initializable {
         }
     }
 
-    public boolean saveFilm(String title, int year, Connection connection) {
+    private boolean saveFilm(String title, int year, Connection connection) {
         PreparedStatement statement;
         String query = "INSERT INTO sakila.film(title, release_year, language_id, last_update)" +
                 "VALUES(?, ?, ?, ?)";
@@ -65,7 +65,7 @@ public class AddActorViewController implements Initializable {
         }
     }
 
-    public boolean saveFilmActor(String firstName, String lastName, String title, Connection connection) {
+    private boolean saveFilmActor(String firstName, String lastName, String title, Connection connection) {
         int actorId = getActorId(firstName, lastName, connection);
         int filmId = getFilmId(title, connection);
         if (actorId < 0 || filmId < 0) {

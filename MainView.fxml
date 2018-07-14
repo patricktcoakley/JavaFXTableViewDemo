@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-
-<AnchorPane prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainViewController">
-    <BorderPane layoutX="6.0" layoutY="6.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <top>
-          <TableView fx:id="actorTableView" prefHeight="409.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-              <columns>
-                  <TableColumn fx:id="actorFirstNameColumn" prefWidth="109.0" text="First Name" />
-                  <TableColumn fx:id="actorLastNameColumn" prefWidth="101.0" text="Last Name" />
-               <TableColumn fx:id="filmTitleColumn" prefWidth="310.0" text="Film Title" />
-               <TableColumn fx:id="filmReleaseYearColumn" prefWidth="79.0" text="Release Year" />
-              </columns>
-          </TableView>
-      </top>
-      <bottom>
-         <ButtonBar maxWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" BorderPane.alignment="CENTER">
-           <buttons>
-             <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonHandler" text="Add" />
-               <Button fx:id="editButton" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" text="Edit" onAction="#editButtonHandler"/>
-               <Button fx:id="deleteButton" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onAction="#deleteButtonHandler" text="Delete" />
-           </buttons>
-         </ButtonBar>
-      </bottom>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainViewController">
+    <BorderPane layoutX="6.0" layoutY="6.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <top>
+            <TableView fx:id="actorTableView" prefHeight="409.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <columns>
+                    <TableColumn fx:id="actorFirstNameColumn" prefWidth="109.0" text="First Name"/>
+                    <TableColumn fx:id="actorLastNameColumn" prefWidth="101.0" text="Last Name"/>
+                    <TableColumn fx:id="filmTitleColumn" prefWidth="310.0" text="Film Title"/>
+                    <TableColumn fx:id="filmReleaseYearColumn" prefWidth="79.0" text="Release Year"/>
+                </columns>
+            </TableView>
+        </top>
+        <bottom>
+            <ButtonBar maxWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+                <buttons>
+                    <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonHandler" text="Add"/>
+                    <Button fx:id="editButton" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" text="Edit"
+                            onAction="#editButtonHandler"/>
+                    <Button fx:id="deleteButton" layoutX="50.0" layoutY="18.0" mnemonicParsing="false"
+                            onAction="#deleteButtonHandler" text="Delete"/>
+                </buttons>
+            </ButtonBar>
+        </bottom>
     </BorderPane>
 </AnchorPane>
